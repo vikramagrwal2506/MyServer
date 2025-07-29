@@ -7,19 +7,6 @@ on:
       - main
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: pip install flake8
-      - name: Run Flake8 Linter
-        run: flake8 . --exit-zero # Use --exit-zero to report warnings but not fail the pipeline unless strict rules are desired
-
   deploy:
     name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
@@ -49,5 +36,3 @@ jobs:
             sudo systemctl enable apache2
             cd home
             sudo mv * /var/www/html
-      
-        
