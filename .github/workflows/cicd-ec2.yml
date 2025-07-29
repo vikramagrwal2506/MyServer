@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-name: CI/CD Pipeline
 
 jobs:
   lint:
@@ -20,7 +19,7 @@ jobs:
         run: pip install flake8
       - name: Run Flake8 Linter
         run: flake8 . --exit-zero # Use --exit-zero to report warnings but not fail the pipeline unless strict rules are desired
-jobs:
+
   deploy:
     name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
