@@ -16,6 +16,6 @@ elif AI<=135000:
 elif AI<=190000:
     print ("Tax will be", X2)
 elif AI>190000:
-    print ("Tax deposited will be changes-just pushed by me", X3)
+    print ("Tax will be", X3)
 else:
     print("ERROR")
