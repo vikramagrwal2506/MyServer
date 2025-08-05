@@ -1,0 +1,14 @@
+testbed:
+	name: cisco_testbed
+	credentials:
+	  default:
+	    username: vikram.agarwal
+	    password: BU5-_zYIxa4p1H
+	devices:
+	  router1:
+	    type: router
+	    os: ios
+	    connections:
+	      cli:
+	        protocol: ssh
+	        ip: devnetsandboxiosxec8k.cisco.com
